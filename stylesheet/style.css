@@ -1,8 +1,3 @@
-/* Raleway Font */
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-/* Roboto Font */
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
 /* CSS Variables */
 :root {
     --shadow: 0 0 5px rgba(104, 104, 104, 0.5);
@@ -14,23 +9,28 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: poppins;
 }
 
 body {
     font-size: 16px;
     line-height: 1.5;
-    font-family: raleway;
+    font-family: lobster;
 }
 
-h1, h2 h2, h4 {
-    font-family: raleway;
+/* h1, h2 h2, h4 {
+    font-family: poppins;
     font-weight: 300;
+    font-size: 45px;
+} */
+
+h1 {
     font-size: 45px;
 }
 
 .wrapper {
     margin-top: 20px;
-    width: 80%;
+    width: 90%;
     margin: 20px auto 20px auto;
 }
 
@@ -61,11 +61,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
+    padding: 15px 5%;
     background-color: #062341;
-    z-index: 5;
+    z-index: 16;
     font-family: roboto;
-    /* position: absolute; */
 }
 
 header h1 {
@@ -74,7 +73,7 @@ header h1 {
     color: #0088a9;
     font-weight: bolder;
     font-size: 25px;
-    font-family: roboto;
+    text-decoration: none;
 }
 
 nav ul {
@@ -96,10 +95,12 @@ nav ul li a {
 
 nav ul li a:hover {
     color: rgb(0, 136, 169);
+    text-decoration: none;
 }
 
 .active {
     color: rgb(0, 136, 169);
+    font-weight: 700
 }
 
 button {
@@ -138,11 +139,12 @@ button:hover {
 .showcase {
     background: url(../img/showcase-img.jpg) no-repeat center;
     background-size: cover;
-    min-height: 550px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    overflow: hidden;
 }
 
 .overlay {
@@ -187,9 +189,6 @@ button:hover {
 }
 
 .intro-text h1 {
-    font-weight: 400;
-    font-size: 45px;
-    letter-spacing: 1.5px;
     color: #a90000;
     padding-right: 10px;
 }
@@ -219,7 +218,7 @@ button:hover {
     flex-basis: 20%;
     justify-content: space-around;
     position: relative;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .lakhey-img {
@@ -243,7 +242,7 @@ button:hover {
 
 /* Events */
 #event {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 .boxes {
     justify-content: space-between;
@@ -334,7 +333,7 @@ footer {
 }
 
 .subscribe input {
-    height: 51px;
+    height: 50px;
     width: 50%;
     background: #fff;
     border-color: transparent;
@@ -390,6 +389,18 @@ footer {
     display: inline-block;
     padding: 0 20px;
 }
+
+.other_links h5 {
+    color: #edf0f1;
+}
+
+.other_links ul {
+    list-style: none;
+}
+
+.other_links ul li a:hover {
+    text-decoration: none;
+} 
 
 /* 
     Experience Page
@@ -471,8 +482,9 @@ footer {
     text-align: center;
 }
 
-#portal hr {
+.hr {
     margin: 25px 0 20px;
+    border-top: .1px solid gray;
 }
 
 #portal a {
@@ -549,7 +561,7 @@ footer {
     position: relative;
     margin-top: 70px;
 }
-
+/*
 input {
     height: 50px;
     width: 100%;
@@ -559,8 +571,9 @@ input {
     font-size: 18px;
     line-height: 18px;
     color: #878787;
+    margin: 10px 0;
 }
-
+*/
 textarea {
     width: 500px;
     border: 1px solid grey;
@@ -569,6 +582,7 @@ textarea {
     color: #878787;
     background: #fff;
     font-size: 18px;
+    margin: 10px auto;
 }
 
 .name {
@@ -583,6 +597,7 @@ textarea {
 
 .head_office h1 {
     margin: 0;
+    font-size: 35px;
 }
 
 .location_contact {
@@ -590,4 +605,57 @@ textarea {
     justify-content: space-between;
 }
 
-/* Gallery */
+/* Carousel */
+.carousel-inner img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+}
+
+.car-img {
+    min-height: 400px;
+}
+
+/* Hotel Booking */
+
+legend {
+    padding: 0 5px;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.personalDetail,
+.booking {
+    position: relative;
+    margin-top: 70px;
+    display: flex;
+    padding: 15px 50px;
+}
+
+.booking {
+    margin-top: 5px;
+}
+
+fieldset input, 
+select {
+    height: 50px;
+    width: 100%;
+    margin: 5px 0 15px 0;
+}
+
+.dates {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dates input {
+    width: 100%;
+}
+
+fieldset input, fieldset select {
+    background: #fff;
+    padding-left: 20px;
+    font-size: 18px;
+    line-height: 18px;
+    color: #878787;
+}
